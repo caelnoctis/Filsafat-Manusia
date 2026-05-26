@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catatan UTS Filsafat Manusia M1-M10</title>
+  <meta name="description" content="Website statis untuk belajar UTS Filsafat Manusia dari Minggu 1 sampai Minggu 10.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true">
+    <span id="readingProgress"></span>
+  </div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Navigasi utama">
+      <a class="brand" href="#top">
+        <span class="brand-mark">FM</span>
+        <span>Filsafat Manusia</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#overview">Overview</a>
+        <a href="#m1-m4">M1-M3</a>
+        <a href="#m5">M4/M5</a>
+        <a href="#symbolizing">M6</a>
+        <a href="#unity">M7</a>
+        <a href="#mbp">M10 MBP</a>
+        <a href="#ringkasan">Ringkasan</a>
+        <a href="#kuis">Kuis</a>
+      </div>
+      <button class="ghost-button nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Study notes, UTS-ready</p>
+          <h1>Catatan UTS Filsafat Manusia M1-M10</h1>
+          <p class="hero-subtitle">Belajar cepat dari definisi filsafat manusia sampai Mind-Body Problem</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#overview">Mulai Belajar</a>
+            <button class="secondary-button" id="showSummaryHero" type="button">Ringkasan Cepat</button>
+            <a class="secondary-button" href="#prediksi">Prediksi Soal</a>
+          </div>
+          <div class="search-panel" role="search">
+            <label for="siteSearch">Cari materi atau kata kunci</label>
+            <div class="search-row">
+              <input id="siteSearch" type="search" placeholder="Contoh: Cassirer, objek formal, MBP">
+              <button class="ghost-button" id="clearSearch" type="button">Reset</button>
+            </div>
+            <p id="searchStatus" class="search-status" aria-live="polite">Siap mencari seluruh materi.</p>
+          </div>
+        </div>
+        <aside class="hero-board" aria-label="Papan belajar">
+          <div class="board-card main-note">
+            <span class="small-label">Fokus UTS</span>
+            <strong>Hakikat manusia</strong>
+            <p>Rasional, simbolik, bertubuh, berjiwa, sosial, dan moral.</p>
+          </div>
+          <div class="board-grid">
+            <div class="mini-note">
+              <span>M1-M3</span>
+              <strong>Fondasi</strong>
+            </div>
+            <div class="mini-note">
+              <span>M4/M5</span>
+              <strong>Rasio</strong>
+            </div>
+            <div class="mini-note">
+              <span>M6</span>
+              <strong>Simbol</strong>
+            </div>
+            <div class="mini-note">
+              <span>M10</span>
+              <strong>MBP</strong>
+            </div>
+          </div>
+          <div class="tool-strip">
+            <button class="ghost-button" id="themeToggle" type="button" aria-pressed="false">Mode Gelap</button>
+            <button class="ghost-button" id="startQuizHero" type="button">Mulai Kuis</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-pad" id="overview">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Overview Materi</p>
+          <h2>Alur belajar M1 sampai M10</h2>
+          <p>Disesuaikan dengan PDF asli: M1 pengantar, M2 sejarah termasuk modern, M3 kehidupan, M4 rational animal, M5 religious animal, M6 simbol, M7 jiwa-tubuh, dan M10 Mind-Body Problem.</p>
+        </div>
+
+        <div class="overview-grid">
+          <article class="overview-card searchable" data-keywords="M1 definisi objek metode ilmu manusia psikologi">
+            <span class="week-badge">M1</span>
+            <h3>Pengantar Filsafat Manusia</h3>
+            <p><strong>Inti:</strong> antropologi filsafat mempelajari manusia sebagai manusia dengan refleksi atau spekulasi.</p>
+            <p><strong>Kata kunci:</strong> man as man, homo qua homo, psikologi rasional, refleksi.</p>
+          </article>
+          <article class="overview-card searchable" data-keywords="M2 Yunani abad pertengahan Socrates Plato Aristoteles Aquinas">
+            <span class="week-badge">M2</span>
+            <h3>Sejarah Klasik, Abad Pertengahan, Modern</h3>
+            <p><strong>Inti:</strong> alur bergerak dari kosmosentris, teosentris, lalu antroposentris yang dipengaruhi ilmu.</p>
+            <p><strong>Kata kunci:</strong> Delphi, Heraclitus, Protagoras, Pascal, Copernicus, Darwin.</p>
+          </article>
+          <article class="overview-card searchable" data-keywords="M3 kehidupan vegetatif sensitif rasional mekanisme vitalisme">
+            <span class="week-badge">M3</span>
+            <h3>Kehidupan</h3>
+            <p><strong>Inti:</strong> kehidupan memiliki tingkat vegetatif, sensitif, dan rasional, serta tetap menjadi misteri.</p>
+            <p><strong>Kata kunci:</strong> fisiologi, DNA, termodinamika, metabolisme, adaptasi.</p>
+          </article>
+          <article class="overview-card searchable" data-keywords="M4 rational animal deduksi induksi abduksi Euripides Aristoteles">
+            <span class="week-badge">M4</span>
+            <h3>Rational Animal</h3>
+            <p><strong>Inti:</strong> manusia bertindak rasional jika mengikuti alasan dan hukum logika.</p>
+            <p><strong>Kata kunci:</strong> deduksi, induksi, abduksi, rasionalitas praktis.</p>
+          </article>
+          <article class="overview-card searchable" data-keywords="M5 religious animal physis telos Durkheim animisme naturisme totemisme">
+            <span class="week-badge">M5</span>
+            <h3>Religious Animal</h3>
+            <p><strong>Inti:</strong> dari kodratnya manusia mencari prinsip tertinggi, yang sakral, dan makna religius.</p>
+            <p><strong>Kata kunci:</strong> physis, telos, Durkheim, animisme, Scalla Naturae.</p>
+          </article>
+          <article class="overview-card searchable" data-keywords="M6 symbolizing animal Cassirer tanda simbol bahasa">
+            <span class="week-badge">M6</span>
+            <h3>Symbolizing Animal</h3>
+            <p><strong>Inti:</strong> manusia hidup dalam dunia simbol, bukan hanya dunia fisik.</p>
+            <p><strong>Kata kunci:</strong> Cassirer, Uexkull, tanda, simbol, bahasa proposisional.</p>
+          </article>
+          <article class="overview-card searchable" data-keywords="M7 jiwa tubuh roh Driyarkara hominisasi">
+            <span class="week-badge">M7</span>
+            <h3>Kesatuan Jiwa dan Tubuh</h3>
+            <p><strong>Inti:</strong> manusia bukan tubuh saja dan bukan jiwa saja, melainkan kesatuan keduanya.</p>
+            <p><strong>Kata kunci:</strong> jiwa, tubuh, roh, Driyarkara, hominisasi.</p>
+          </article>
+          <article class="overview-card searchable" data-keywords="M10 Mind Body Problem Descartes materialisme idealisme Penfield">
+            <span class="week-badge">M10</span>
+            <h3>Mind-Body Problem</h3>
+            <p><strong>Inti:</strong> MBP bertanya bagaimana jiwa atau pikiran immaterial berhubungan dengan tubuh material.</p>
+            <p><strong>Kata kunci:</strong> Descartes, Leibniz, Malebranche, Spinoza, Penfield.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad soft-band" id="m1-m4">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Fondasi</p>
+          <h2>M1 sampai M3 dari PDF asli</h2>
+          <p>Bagian ini menata dasar: pengantar filsafat manusia, sejarah pandangan tentang manusia, dan pertanyaan tentang kehidupan.</p>
+        </div>
+
+        <article class="study-card accordion searchable" id="m1" data-keywords="M1 definisi objek material objek formal metode psikologi manusia utuh">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-m1">
+            <span>M1 - Pengantar Filsafat Manusia</span>
+            <span class="toggle-icon" aria-hidden="true">-</span>
+          </button>
+          <div class="accordion-panel" id="panel-m1">
+            <div class="content-grid">
+              <div>
+                <p>Dalam PDF, filsafat manusia juga disebut antropologi filsafat, yaitu studi sistematis tentang manusia dengan metode refleksi. Nama lain yang dekat adalah psikologi rasional atau psikologi metafisik, yang dibedakan dari psikologi ilmiah yang empiris dan eksperimental.</p>
+                <ul class="clean-list">
+                  <li>Moto penting: Man is the measure of all things dari Protagoras.</li>
+                  <li>Moto penting lain: Know thyself atau Gnoti se auton dari Orakel Delphi.</li>
+                  <li>Definisi PDF: filsafat manusia mempelajari segala aspek tentang manusia, man as man, dengan metode refleksi atau spekulasi.</li>
+                  <li>Objek filsafat manusia adalah manusia.</li>
+                  <li>Objek formalnya adalah man as man atau homo qua homo, manusia sebagai manusia.</li>
+                  <li>Filsafat manusia melihat seluruh aspek manusia, bukan hanya satu sisi seperti ilmu-ilmu empiris.</li>
+                </ul>
+              </div>
+              <div class="note-box">
+                <h3>Cabang ilmu filsafat</h3>
+                <div class="chip-row">
+                  <span class="chip">Ontologi</span>
+                  <span class="chip">Epistemologi</span>
+                  <span class="chip">Psikologi rasional</span>
+                  <span class="chip">Theodicea</span>
+                  <span class="chip">Logika</span>
+                  <span class="chip">Etika</span>
+                  <span class="chip">Filsafat politik</span>
+                  <span class="chip">Aksiologi</span>
+                  <span class="chip">Estetika</span>
+                </div>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Model manusia dalam PDF</th>
+                    <th>Tokoh dan inti</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Makhluk biologis</td>
+                    <td>Buytendijk menekankan abstraksi, simbolisasi, dan penyusunan logis simbol. Portman menekankan bahasa, posisi tubuh vertikal, ritme pertumbuhan, keterbukaan, dan internalitas.</td>
+                  </tr>
+                  <tr>
+                    <td>Makhluk sosial budaya</td>
+                    <td>Gehlen, Rothacker, dan Cassirer melihat manusia sebagai pembentuk sejarah dan kebudayaan. Bagi Gehlen, kebudayaan muncul karena kelemahan fisik dan keterbatasan insting manusia.</td>
+                  </tr>
+                  <tr>
+                    <td>Makhluk psikologis</td>
+                    <td>Plessner, Binswanger, Straus, dan Fromm melihat manusia lewat pengalaman seperti tertawa, menangis, mengkhayal, malu, cinta, dan takut. Plessner menekankan posisi eksentris manusia.</td>
+                  </tr>
+                  <tr>
+                    <td>Makhluk teologis</td>
+                    <td>Buber, Brunner, dan Bonhoeffer melihat manusia sebagai makhluk yang berdialog dengan Sang Pencipta. Untuk memahami wahyu, manusia memerlukan logika hati, bukan logika intelek saja.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>Manfaat M1:</strong> filsafat manusia memberi gambaran manusia dari segala aspek. Ilmu non-filsafat mempelajari manusia dari sisi tertentu, sedangkan filsafat manusia menyoroti manusia sebagai manusia. Meski begitu, manusia tetap makhluk yang penuh misteri.</p>
+          </div>
+        </article>
+
+        <article class="study-card accordion searchable" id="m2" data-keywords="M2 Yunani abad pertengahan Delphi Heraclitus Protagoras Socrates Plato Aristoteles Aurelius Agustinus Aquinas">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-m2">
+            <span>M2 - Sejarah Filsafat Manusia</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-panel" id="panel-m2" hidden>
+            <ul class="clean-list two-col">
+              <li><strong>Orakel Delphi:</strong> Gnoti seauton, kenalilah dirimu sebelum mengungkap rahasia jagad raya.</li>
+              <li><strong>Heraclitus:</strong> aku mencari diriku sendiri, manusia perlu mengenal diri sebelum mengenal alam.</li>
+              <li><strong>Protagoras:</strong> manusia adalah ukuran segala sesuatu.</li>
+              <li><strong>Socrates:</strong> manusia hanya dapat dijelaskan melalui kesadarannya.</li>
+              <li><strong>Plato:</strong> manusia adalah kesatuan jiwa dan tubuh, tubuh menjadi kubur dan penjara bagi jiwa.</li>
+              <li><strong>Aristoteles:</strong> manusia adalah rational animal dan kesatuan mutlak jiwa-tubuh.</li>
+              <li><strong>Zeno:</strong> manusia menemukan diri dengan hidup harmonis bersama alam.</li>
+              <li><strong>Marcus Aurelius:</strong> nilai manusia ditentukan oleh penilaian manusia atas dirinya sendiri.</li>
+              <li><strong>Agustinus:</strong> manusia diciptakan menurut citra Allah, tetapi rasio dikaburkan oleh dosa.</li>
+              <li><strong>Thomas Aquinas:</strong> manusia adalah kesatuan jiwa dan tubuh, tujuan tertinggi adalah persatuan dengan Tuhan.</li>
+              <li><strong>Pico della Mirandola:</strong> manusia dipandang sebagai mukjizat terbesar dan punya martabat istimewa.</li>
+            </ul>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Masa Klasik Yunani</th>
+                    <th>Abad Pertengahan</th>
+                    <th>Masa Modern</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Coraknya kosmosentris.</td>
+                    <td>Coraknya teosentris.</td>
+                    <td>Coraknya antroposentris.</td>
+                  </tr>
+                  <tr>
+                    <td>Pandangan tentang manusia sangat spekulatif.</td>
+                    <td>Pandangan tentang manusia bersifat teologis, dikaitkan dengan Tuhan dan agama.</td>
+                    <td>Pandangan tentang manusia dipengaruhi perkembangan ilmu-ilmu.</td>
+                  </tr>
+                  <tr>
+                    <td>Tokoh kunci: Delphi, Heraclitus, Protagoras, Socrates, Plato, Aristoteles.</td>
+                    <td>Tokoh kunci: Agustinus, Aquinas, Pico della Mirandola.</td>
+                    <td>Tokoh kunci: Pascal, Copernicus, Galileo, Descartes, Darwin, Cassirer.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <article class="study-card accordion searchable" id="m3" data-keywords="M3 modern Pascal Copernicus Bruno Galileo Descartes Leibniz Spinoza Diderot Darwin Taine Carrel Cassirer">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-m3">
+            <span>M2 Lanjutan - Masa Modern dalam Filsafat Manusia</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-panel" id="panel-m3" hidden>
+            <div class="figure-grid">
+              <div class="figure-card"><h3>Blaise Pascal</h3><p>Manusia penuh kontradiksi, rumit, dan tidak cukup dipahami dengan logika saja. Bagi Pascal, manusia perlu mendengarkan firman Allah.</p></div>
+              <div class="figure-card"><h3>Copernicus</h3><p>Kosmologi heliosentris menempatkan manusia bukan di pusat kosmos, tetapi sebagai bagian dari alam semesta.</p></div>
+              <div class="figure-card"><h3>Galileo</h3><p>Matematika dipandang sebagai jalan untuk mencapai kebenaran objektif tentang alam.</p></div>
+              <div class="figure-card"><h3>Descartes</h3><p>Cogito ergo sum, lewat kesangsian universal manusia mengenal diri sebagai subjek berpikir.</p></div>
+              <div class="figure-card"><h3>Leibniz</h3><p>Hukum alam dipahami sebagai bagian dari hukum rasio, matematika membantu memahami alam fisik.</p></div>
+              <div class="figure-card"><h3>Spinoza</h3><p>Rasio matematis menjadi kunci memahami tata kosmos dan tata moral.</p></div>
+              <div class="figure-card"><h3>Diderot</h3><p>Mengkritik pengagungan matematika, ilmu konkret berbasis observasi akan semakin penting.</p></div>
+              <div class="figure-card"><h3>Darwin</h3><p>Teori evolusi memberi pemahaman baru bahwa manusia berevolusi dari organisme sederhana melalui seleksi alam.</p></div>
+              <div class="figure-card"><h3>H. A. Taine</h3><p>Manusia dipahami sebagai hewan unggul yang mampu berfilsafat dan berpuisi.</p></div>
+              <div class="figure-card"><h3>Alexis Carrel</h3><p>Manusia adalah man the unknown, tidak dapat dipahami seluruhnya tanpa kerja sama antar-ilmu.</p></div>
+              <div class="figure-card"><h3>Ernst Cassirer</h3><p>Manusia adalah symbol-making animal atau symbolic animal.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="study-card accordion searchable" id="m4" data-keywords="M4 kehidupan fisiologi metabolisme biokimia genetika mekanisme vitalisme kreasionisme spontan kimiawi bumi air atmosfer suhu">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-m4">
+            <span>M3 - Kehidupan</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-panel" id="panel-m4" hidden>
+            <p>PDF membagi kehidupan ke dalam tiga tingkat: kehidupan vegetatif pada tumbuhan, kehidupan sensitif pada hewan, dan kehidupan rasional pada manusia. Dalam hierarki ini, manusia berada di tingkat tertinggi karena rasionya.</p>
+            <div class="content-grid">
+              <div class="note-box">
+                <h3>Pendekatan kehidupan</h3>
+                <ul class="clean-list">
+                  <li>Fisiologi: hidup menjalankan makan, metabolisme, pembuangan, bernapas, bergerak, tumbuh, reproduksi, dan respons terhadap stimuli.</li>
+                  <li>Biokimia: organisme hidup memiliki informasi herediter dalam asam nukleat atau DNA.</li>
+                  <li>Genetika: kehidupan mampu berevolusi melalui seleksi alam dan adaptasi lingkungan.</li>
+                  <li>Termodinamika: living systems tidak terisolasi dari lingkungan dan terus mengurangi entropi.</li>
+                </ul>
+              </div>
+              <div class="note-box">
+                <h3>Asal-usul kehidupan</h3>
+                <ul class="clean-list">
+                  <li>Kreasionisme: kehidupan diciptakan oleh Tuhan.</li>
+                  <li>Spontaneous generation: hidup muncul dari benda mati, kemudian digugat oleh biogenesis.</li>
+                  <li>Kehidupan tidak berawal: panspermia dan gagasan kehidupan ada bersama materi.</li>
+                  <li>Reaksi kimiawi: kehidupan muncul lewat proses kimia progresif pada awal bumi.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Mekanisme</th>
+                    <th>Vitalisme</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Aktivitas kehidupan bersifat mekanistik, organisme seperti jam yang sangat rumit.</td>
+                    <td>Kehidupan dimungkinkan oleh daya kehidupan atau elan vital.</td>
+                  </tr>
+                  <tr>
+                    <td>Bersumber dari materialisme, realitas berasal dari materi atau atom.</td>
+                    <td>Dikaitkan dengan kreasionisme agama, daya hidup berasal dari Sang Pencipta.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>Prasyarat kehidupan di planet bumi</h3>
+            <div class="chip-row">
+              <span class="chip">Molecules of life</span>
+              <span class="chip">Protein</span>
+              <span class="chip">Karbohidrat</span>
+              <span class="chip">Lipids</span>
+              <span class="chip">Asam nukleat</span>
+              <span class="chip">Metabolisme</span>
+              <span class="chip">Air</span>
+              <span class="chip">Adaptasi</span>
+            </div>
+            <p><strong>Kesimpulan M3:</strong> definisi kehidupan belum memuaskan seluruhnya. Banyak aspek kehidupan, dari sel sederhana sampai organisme kompleks, masih belum selesai dijelaskan. Kehidupan tetap misteri.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad" id="m5">
+      <div class="container">
+        <article class="study-card accordion searchable" data-keywords="M4 M5 rational animal religious animal deduksi induksi abduksi Euripides Porphyrius Socrates Plato Aristoteles Descartes Russell Durkheim animisme naturisme totemisme Aquinas Ibnu Rusyd Agustinus Scalla Naturae">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-m5">
+            <span>M4/M5 - Rational Animal dan Religious Animal</span>
+            <span class="toggle-icon" aria-hidden="true">-</span>
+          </button>
+          <div class="accordion-panel" id="panel-m5">
+            <div class="content-grid">
+              <div>
+                <p>Dalam PDF, materi Rational Animal muncul sebagai M4. Manusia disebut rational animal karena manusia adalah makhluk hidup yang bernalar. Seseorang berpikir atau bertindak rasional ketika bertindak berdasarkan alasan rasional dan mengikuti hukum logika.</p>
+                <h3>Rasionalitas praktis</h3>
+                <ul class="clean-list">
+                  <li>Keinginan, apa yang ingin dicapai.</li>
+                  <li>Keyakinan, apa yang dianggap benar.</li>
+                  <li>Cost-benefit, pertimbangan untung-rugi sebelum bertindak.</li>
+                </ul>
+              </div>
+              <div class="note-box">
+                <h3>Tokoh penting</h3>
+                <div class="chip-row">
+                  <span class="chip">Euripides</span>
+                  <span class="chip">Porphyrius</span>
+                  <span class="chip">Socrates</span>
+                  <span class="chip">Plato</span>
+                  <span class="chip">Aristoteles</span>
+                  <span class="chip">Descartes</span>
+                  <span class="chip">Bertrand Russell</span>
+                </div>
+              </div>
+            </div>
+            <div class="method-grid">
+              <div class="method-card">
+                <h3>Deduksi</h3>
+                <p>Kesimpulan pasti benar jika premis-premisnya benar.</p>
+                <p><strong>Contoh:</strong> semua manusia akan mati. Socrates manusia. Jadi Socrates akan mati.</p>
+              </div>
+              <div class="method-card">
+                <h3>Induksi</h3>
+                <p>Kesimpulan bersifat mungkin benar karena diambil dari data partikular.</p>
+                <p><strong>Contoh:</strong> beberapa logam memuai saat dipanaskan. Maka logam cenderung memuai saat dipanaskan.</p>
+              </div>
+              <div class="method-card">
+                <h3>Abduksi</h3>
+                <p>Konklusi mengandung hal baru dan sering melibatkan lompatan imajinasi.</p>
+                <p><strong>Contoh:</strong> lantai basah dan jendela terbuka. Penjelasan terbaik, hujan masuk dari jendela.</p>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tokoh</th>
+                    <th>Poin dari PDF</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Socrates</td>
+                    <td>Manusia tidak berhenti mencari dirinya. Nilai sejati manusia terletak pada pencarian kritis atas kondisi eksistensinya.</td>
+                  </tr>
+                  <tr>
+                    <td>Plato</td>
+                    <td>Jiwa adalah realitas sebenarnya. Logos atau reason mengendalikan thymos dan eros.</td>
+                  </tr>
+                  <tr>
+                    <td>Aristoteles</td>
+                    <td>Manusia adalah kesatuan mutlak jiwa dan tubuh. Jiwa adalah forma, tubuh adalah materi.</td>
+                  </tr>
+                  <tr>
+                    <td>Descartes</td>
+                    <td>Manusia adalah a thinking thing. Tubuh bekerja seperti mesin, jiwa bersifat nonmaterial dan berinteraksi melalui pineal gland.</td>
+                  </tr>
+                  <tr>
+                    <td>Oscar Wilde dan Russell</td>
+                    <td>Keduanya mengkritik klaim manusia sebagai hewan rasional dengan nada ironis, karena manusia tidak selalu mengikuti rasio.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content-grid">
+              <div class="note-box">
+                <h3>M5 di PDF: Religious Animal</h3>
+                <p>PDF mengaitkan religious animal dengan konsep Aristoteles tentang physis dan telos. Physis adalah prinsip atau kodrat internal, sekaligus penyebab formal dan tujuan. Dari sini muncul gagasan bahwa mengenal Tuhan berakar dalam kodrat manusia.</p>
+                <div class="chip-row">
+                  <span class="chip">physis</span>
+                  <span class="chip">telos</span>
+                  <span class="chip">causa finalis</span>
+                  <span class="chip">uncaused cause</span>
+                  <span class="chip">religious animal</span>
+                </div>
+              </div>
+              <div class="note-box">
+                <h3>Durkheim: asal mula religi</h3>
+                <ul class="clean-list">
+                  <li>Yang sakral: khusus, simbolis, dihormati, dan dikagumi.</li>
+                  <li>Yang profan: hal biasa dan duniawi.</li>
+                  <li>Animisme: kepercayaan akan jiwa dan roh.</li>
+                  <li>Naturisme: ide religius muncul dari pengalaman fenomena alam.</li>
+                  <li>Totemisme: totem sebagai representasi material dari kekuatan nonmaterial masyarakat.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tokoh M5 PDF</th>
+                    <th>Gagasan tentang jiwa dan manusia</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Agustinus</td>
+                    <td>Manusia bereksistensi, hidup, dan berakal budi. Rasio perlu bekerja sama dengan iman untuk mengenal kebenaran tertinggi.</td>
+                  </tr>
+                  <tr>
+                    <td>Ibnu Rusyd</td>
+                    <td>Jiwa adalah forma dan tubuh adalah materi. Ada jiwa individual yang tidak kekal dan jiwa ilahi yang kekal.</td>
+                  </tr>
+                  <tr>
+                    <td>Thomas Aquinas</td>
+                    <td>Manusia adalah komposit jiwa dan tubuh. Jiwa diciptakan Tuhan, bersifat rohani, tunggal, prinsip hidup, dan tidak dapat mati.</td>
+                  </tr>
+                  <tr>
+                    <td>Scalla Naturae</td>
+                    <td>Rantai ciptaan dari mineral, tumbuhan, hewan, manusia, malaikat, sampai Tuhan. Manusia berada di antara dunia fisik dan spiritual.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad soft-band" id="symbolizing">
+      <div class="container">
+        <article class="study-card accordion searchable" data-keywords="M6 symbolizing animal Cassirer Uexkull tanda simbol bahasa emosional proposisional hewan">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-symbolizing">
+            <span>M6 - Manusia sebagai Symbolizing Animal</span>
+            <span class="toggle-icon" aria-hidden="true">-</span>
+          </button>
+          <div class="accordion-panel" id="panel-symbolizing">
+            <p>Tokoh utamanya adalah Ernst Cassirer. Dalam An Essay on Man, Cassirer mendefinisikan manusia sebagai symbol-making animal atau symbolizing animal. Definisi ini dianggap lebih tepat daripada rational animal karena simbol adalah dimensi baru pada manusia yang tidak terdapat pada hewan.</p>
+            <div class="content-grid">
+              <div class="note-box">
+                <h3>Simbol manusia</h3>
+                <div class="chip-row">
+                  <span class="chip">Bahasa</span>
+                  <span class="chip">Mitos</span>
+                  <span class="chip">Religi</span>
+                  <span class="chip">Seni</span>
+                  <span class="chip">Sejarah</span>
+                  <span class="chip">Ilmu</span>
+                  <span class="chip">Hukum</span>
+                  <span class="chip">Uang</span>
+                  <span class="chip">Budaya</span>
+                </div>
+              </div>
+              <div class="note-box">
+                <h3>Uexkull</h3>
+                <ul class="clean-list">
+                  <li>Hewan punya lingkaran fungsional, yaitu sistem akseptor atau Merknetz dan sistem efektor atau Wirknetz.</li>
+                  <li>Manusia punya sistem tambahan, yaitu sistem simbolis.</li>
+                  <li>Karena itu manusia tidak berhadapan langsung dengan realitas fisik, tetapi melalui konstruksi simbolik.</li>
+                  <li>Inteligensi praktis hewan berarti hewan bisa memecahkan masalah konkret, tetapi biasanya terikat situasi langsung.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tanda</th>
+                    <th>Simbol</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Membawa informasi dan terikat objek konkret.</td>
+                    <td>Membawa makna dan bisa lepas dari objek konkret.</td>
+                  </tr>
+                  <tr>
+                    <td>Dipakai hewan dan manusia.</td>
+                    <td>Khas manusia karena dapat disusun dalam sistem makna.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Bahasa emosional</th>
+                    <th>Bahasa proposisional</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ekspresi perasaan, seperti takut, marah, atau senang.</td>
+                    <td>Punya struktur logis dan sintaksis.</td>
+                  </tr>
+                  <tr>
+                    <td>Bisa ditemukan juga pada hewan dalam bentuk ekspresi.</td>
+                    <td>Mampu menyatakan gagasan abstrak dan hubungan sebab-akibat.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>Poin lanjutan PDF:</strong> perbedaan manusia dan hewan bukan hanya mengenali simbol, tetapi menyusun simbol secara terstruktur dan bermakna. Manusia dapat membangun bahasa, logika, budaya, dan realitas sosial bersama.</p>
+            <div class="content-grid">
+              <div class="note-box">
+                <h3>Hewan dan simbol</h3>
+                <p>Pavlov, Wolfe, dan Kohler menunjukkan bahwa hewan dapat bereaksi secara tidak langsung terhadap stimulus. Namun menurut Cassirer, itu belum sama dengan dunia simbol manusia.</p>
+              </div>
+              <div class="note-box">
+                <h3>Kemampuan reflektif</h3>
+                <p>PDF menekankan bahwa manusia bukan hanya mengenali simbol, tetapi mengurutkan simbol secara terstruktur dan bermakna. Simbol menjadi fondasi bahasa, logika, matematika, musik, dan realitas sosial.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad" id="unity">
+      <div class="container">
+        <article class="study-card accordion searchable" data-keywords="M7 kesatuan jiwa tubuh roh Driyarkara mens sana hominisasi Aristoteles kreasionisme tradusianisme immediate mediate animation kekekalan jiwa Rahner Chardin">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-unity">
+            <span>M7 - Manusia sebagai Kesatuan Jiwa dan Tubuh</span>
+            <span class="toggle-icon" aria-hidden="true">-</span>
+          </button>
+          <div class="accordion-panel" id="panel-unity">
+            <p>Manusia bukan hanya tubuh dan bukan hanya jiwa. Manusia adalah kesatuan jiwa dan tubuh. Keduanya berbeda, tetapi dalam pengalaman manusia selalu saling terhubung.</p>
+            <div class="content-grid">
+              <div class="note-box">
+                <h3>Tubuh</h3>
+                <ul class="clean-list">
+                  <li>Aspek jasmani dan material.</li>
+                  <li>Menjasmani yang rohani, tubuh adalah jasmani yang dirohanikan.</li>
+                  <li>Tunduk pada hukum alam.</li>
+                  <li>Tubuh luhur jika mengabdi roh.</li>
+                  <li>Menurut Driyarkara, tubuh adalah cara AKU menampakkan diri ke dunia.</li>
+                </ul>
+              </div>
+              <div class="note-box">
+                <h3>Jiwa</h3>
+                <ul class="clean-list">
+                  <li>Prinsip aktif kehidupan.</li>
+                  <li>Memerohani yang jasmani.</li>
+                  <li>Spiritual, sederhana atau simplex, esensial, integral, aktif, dan intensional.</li>
+                  <li>Ada di seluruh tubuh, bukan sebagai benda yang menempati satu titik.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Hubungan jiwa dan tubuh</th>
+                    <th>Contoh sehari-hari</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Kondisi mental memengaruhi tubuh.</td>
+                    <td>Stres membuat tubuh lemas.</td>
+                  </tr>
+                  <tr>
+                    <td>Perasaan tampil lewat tubuh.</td>
+                    <td>Sedih membuat menangis.</td>
+                  </tr>
+                  <tr>
+                    <td>Kondisi tubuh memengaruhi jiwa.</td>
+                    <td>Kurang tidur membuat mood buruk.</td>
+                  </tr>
+                  <tr>
+                    <td>Rasa sakit memengaruhi semangat.</td>
+                    <td>Sakit membuat semangat turun.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content-grid">
+              <div>
+                <h3>Mens sana in corpore sano</h3>
+                <p>Artinya jiwa yang sehat ada dalam tubuh yang sehat. Maksudnya, kondisi jiwa dan tubuh saling memengaruhi, sehingga kesehatan manusia perlu dipahami secara utuh.</p>
+                <h3>Karakteristik tubuh manusia</h3>
+                <ul class="clean-list">
+                  <li>Posisi tubuh tegak.</li>
+                  <li>Sistem saraf dan otak kompleks.</li>
+                </ul>
+              </div>
+              <div class="note-box">
+                <h3>Jiwa, tubuh, dan roh menurut Aristoteles</h3>
+                <p>Manusia mengungguli hewan karena ada unsur roh. Roh berhubungan langsung dengan jiwa, jiwa berhubungan langsung dengan tubuh. Roh adalah prinsip aktif yang memanifestasikan diri lewat jiwa.</p>
+                <h3>Asal-usul jiwa</h3>
+                <div class="chip-row">
+                  <span class="chip">Kreasionisme</span>
+                  <span class="chip">Tradusianisme</span>
+                  <span class="chip">Immediate animation</span>
+                  <span class="chip">Mediate animation</span>
+                </div>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tema lanjutan PDF</th>
+                    <th>Inti hafalan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Hominisasi</td>
+                    <td>Immediate animation menyatakan jiwa muncul sejak pertemuan sel reproduktif. Mediate animation menyatakan jiwa muncul kemudian saat materi tubuh cukup matang.</td>
+                  </tr>
+                  <tr>
+                    <td>Kekekalan jiwa</td>
+                    <td>Argumennya meliputi kesepakatan umum, etika, Teilhard de Chardin, argumen ontologis, dan hasrat manusia akan hidup serta kebahagiaan.</td>
+                  </tr>
+                  <tr>
+                    <td>Jiwa sesudah kematian</td>
+                    <td>Ada dua jawaban dalam PDF: jiwa beraktivitas sendiri, atau jiwa menjadi pankosmis menurut Karl Rahner.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad soft-band" id="mbp">
+      <div class="container">
+        <article class="study-card accordion searchable" data-keywords="M10 Mind Body Problem Descartes materialisme idealisme harmoni purba okkasionalisme Malebranche epifenomenalisme Spinoza interaksionisme Penfield">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-mbp">
+            <span>M10 - Mind-Body Problem</span>
+            <span class="toggle-icon" aria-hidden="true">-</span>
+          </button>
+          <div class="accordion-panel" id="panel-mbp">
+            <p>Mind-Body Problem adalah persoalan tentang bagaimana jiwa atau pikiran yang immaterial bisa berhubungan dan saling memengaruhi dengan tubuh yang material. PDF menekankan paradoksnya: dua hal berbeda hakikat, tetapi nyata-nyata saling memengaruhi.</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Jiwa atau mind</th>
+                    <th>Tubuh atau body</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Intangible, invisible, immaterial, tidak punya bentuk fisik, tidak punya ekstensi, bisa berpikir dan berkehendak.</td>
+                    <td>Tangible, visible, material, punya ukuran dan berat, punya ekstensi ruang, gerak, dan bisa diukur.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content-grid">
+              <div class="note-box">
+                <h3>Contoh MBP</h3>
+                <ul class="clean-list">
+                  <li>Sedih membuat tubuh menangis.</li>
+                  <li>Sakit membuat suasana hati memburuk.</li>
+                  <li>Bahagia membuat tubuh lebih berenergi.</li>
+                  <li>Stres memengaruhi tidur dan nafsu makan.</li>
+                </ul>
+              </div>
+              <div class="note-box">
+                <h3>Descartes</h3>
+                <ul class="clean-list">
+                  <li>Tokoh utama MBP.</li>
+                  <li>Membedakan jiwa dan tubuh sebagai dua substansi.</li>
+                  <li>Masalahnya, ia tidak bisa menjelaskan mekanisme hubungan jiwa dan tubuh secara memuaskan.</li>
+                  <li>Ratu Elizabeth dari Bohemia pernah mempertanyakan bagaimana jiwa immaterial bisa menggerakkan tubuh material.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Teori</th>
+                    <th>Pandangan</th>
+                    <th>Kelemahan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Materialisme</td>
+                    <td>Jiwa adalah aktivitas otak.</td>
+                    <td>Sulit menjelaskan pengalaman subjektif.</td>
+                  </tr>
+                  <tr>
+                    <td>Idealisme</td>
+                    <td>Yang nyata adalah pikiran atau jiwa.</td>
+                    <td>Sulit menjelaskan kerusakan otak yang merusak pikiran.</td>
+                  </tr>
+                  <tr>
+                    <td>Harmoni purba</td>
+                    <td>Leibniz, jiwa dan tubuh berjalan paralel.</td>
+                    <td>Seperti menghindari pertanyaan mekanisme.</td>
+                  </tr>
+                  <tr>
+                    <td>Okkasionalisme</td>
+                    <td>Malebranche, Tuhan memediasi interaksi jiwa-tubuh.</td>
+                    <td>Sulit diuji ilmiah.</td>
+                  </tr>
+                  <tr>
+                    <td>Epifenomenalisme</td>
+                    <td>Jiwa hanya bayangan proses otak.</td>
+                    <td>Sulit menjelaskan pengaruh kondisi mental ke tubuh.</td>
+                  </tr>
+                  <tr>
+                    <td>Double-aspect theory</td>
+                    <td>Spinoza, jiwa dan tubuh adalah dua sisi dari satu substansi.</td>
+                    <td>Substansi dasar masih sulit dijelaskan.</td>
+                  </tr>
+                  <tr>
+                    <td>Interaksionisme</td>
+                    <td>Descartes, jiwa dan tubuh saling memengaruhi.</td>
+                    <td>Mekanismenya belum jelas.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note-box">
+              <h3>Data empiris Penfield</h3>
+              <p>Wilder Penfield merangsang area otak pasien epilepsi yang sadar penuh saat operasi. Ketika area bicara dirangsang, pasien tidak bisa bicara, tetapi tetap sadar bahwa ia ingin bicara dan tahu kata yang hendak diucapkan. Penfield menyimpulkan otak dapat menghambat kemampuan, tetapi mind mengawasi, mengatur, dan memberi makna.</p>
+            </div>
+            <p><strong>Kesimpulan PDF:</strong> MBP belum terpecahkan. Tidak ada teori yang tuntas menjelaskan interaksi jiwa dan tubuh. Ini penting bagi filsafat, psikologi, neurosains, kedokteran, dan spiritualitas.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad" id="ringkasan">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Ringkasan Super Cepat</p>
+          <h2>Delapan kalimat hafalan utama</h2>
+        </div>
+        <div class="summary-grid searchable" data-keywords="ringkasan super cepat M1 M2 M3 M4 M5 M6 M7 M10">
+          <div class="summary-card"><span>M1</span><p>Filsafat manusia mempelajari manusia sebagai manusia, man as man, dengan refleksi atau spekulasi.</p></div>
+          <div class="summary-card"><span>M2</span><p>Sejarah bergerak dari Yunani kosmosentris, Abad Pertengahan teosentris, sampai modern yang dipengaruhi ilmu.</p></div>
+          <div class="summary-card"><span>M3</span><p>Kehidupan memiliki tingkat vegetatif, sensitif, dan rasional, tetapi definisi kehidupan tetap belum memuaskan.</p></div>
+          <div class="summary-card"><span>M4</span><p>Rational animal berarti manusia bernalar melalui deduksi, induksi, abduksi, dan rasionalitas praktis.</p></div>
+          <div class="summary-card"><span>M5</span><p>Religious animal berarti manusia secara kodrati mencari yang sakral, telos, dan prinsip tertinggi.</p></div>
+          <div class="summary-card"><span>M6</span><p>Symbolizing animal berarti manusia hidup dalam bahasa, mitos, religi, seni, sejarah, ilmu, dan simbol.</p></div>
+          <div class="summary-card"><span>M7</span><p>Manusia adalah kesatuan jiwa dan tubuh, dengan tubuh sebagai cara AKU menampakkan diri ke dunia.</p></div>
+          <div class="summary-card"><span>M10</span><p>MBP bertanya bagaimana jiwa immaterial dan tubuh material dapat saling memengaruhi.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad soft-band" id="keywords">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Kata Kunci Wajib Hafal</p>
+          <h2>Chips hafalan per minggu</h2>
+        </div>
+        <div class="keyword-grid">
+          <article class="keyword-card searchable" data-keywords="M1 objek material objek formal refleksi kritis manusia utuh">
+            <h3>M1</h3>
+            <div class="chip-row"><span class="chip">antropologi filsafat</span><span class="chip">psikologi rasional</span><span class="chip">man as man</span><span class="chip">homo qua homo</span><span class="chip">refleksi</span></div>
+          </article>
+          <article class="keyword-card searchable" data-keywords="M2 Orakel Delphi Socrates Plato Aristoteles Agustinus Aquinas">
+            <h3>M2</h3>
+            <div class="chip-row"><span class="chip">Orakel Delphi</span><span class="chip">Heraclitus</span><span class="chip">Protagoras</span><span class="chip">Socrates</span><span class="chip">Plato</span><span class="chip">Aristoteles</span><span class="chip">Pico</span></div>
+          </article>
+          <article class="keyword-card searchable" data-keywords="M3 Pascal Copernicus Galileo Descartes Darwin Cassirer">
+            <h3>M2 Modern</h3>
+            <div class="chip-row"><span class="chip">Pascal</span><span class="chip">Copernicus</span><span class="chip">Galileo</span><span class="chip">Descartes</span><span class="chip">Darwin</span><span class="chip">Carrel</span><span class="chip">Cassirer</span></div>
+          </article>
+          <article class="keyword-card searchable" data-keywords="M4 fisiologi metabolisme biokimia genetika mekanisme vitalisme">
+            <h3>M3</h3>
+            <div class="chip-row"><span class="chip">vita vegetativa</span><span class="chip">vita sensitiva</span><span class="chip">vita rationalis</span><span class="chip">DNA</span><span class="chip">mekanisme</span><span class="chip">vitalisme</span></div>
+          </article>
+          <article class="keyword-card searchable" data-keywords="M5 rational animal deduksi induksi abduksi rasionalitas praktis">
+            <h3>M4</h3>
+            <div class="chip-row"><span class="chip">rational animal</span><span class="chip">deduksi</span><span class="chip">induksi</span><span class="chip">abduksi</span><span class="chip">cost-benefit</span></div>
+          </article>
+          <article class="keyword-card searchable" data-keywords="M5 religious animal physis telos Durkheim animisme naturisme totemisme">
+            <h3>M5</h3>
+            <div class="chip-row"><span class="chip">religious animal</span><span class="chip">physis</span><span class="chip">telos</span><span class="chip">Durkheim</span><span class="chip">animisme</span><span class="chip">Scalla Naturae</span></div>
+          </article>
+          <article class="keyword-card searchable" data-keywords="M6 Cassirer symbolizing animal tanda simbol bahasa proposisional">
+            <h3>M6</h3>
+            <div class="chip-row"><span class="chip">Cassirer</span><span class="chip">symbolizing animal</span><span class="chip">Uexkull</span><span class="chip">tanda</span><span class="chip">simbol</span><span class="chip">bahasa proposisional</span></div>
+          </article>
+          <article class="keyword-card searchable" data-keywords="M7 jiwa tubuh roh Driyarkara mens sana in corpore sano hominisasi">
+            <h3>M7</h3>
+            <div class="chip-row"><span class="chip">jiwa</span><span class="chip">tubuh</span><span class="chip">roh</span><span class="chip">Driyarkara</span><span class="chip">hominisasi</span><span class="chip">pankosmis</span></div>
+          </article>
+          <article class="keyword-card searchable" data-keywords="M10 MBP Descartes materialisme idealisme Leibniz Malebranche Penfield">
+            <h3>M10</h3>
+            <div class="chip-row"><span class="chip">MBP</span><span class="chip">Descartes</span><span class="chip">materialisme</span><span class="chip">idealisme</span><span class="chip">Leibniz</span><span class="chip">Malebranche</span><span class="chip">Penfield</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="prediksi">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Prediksi Soal UTS</p>
+          <h2>20 soal dan jawaban singkat</h2>
+        </div>
+        <div class="qa-list" id="qaList">
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa1"><span>1. Apa itu filsafat manusia menurut PDF?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa1" hidden><p>Filsafat manusia adalah cabang filsafat yang mempelajari segala aspek manusia sebagai manusia, man as man, dengan metode refleksi atau spekulasi.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa2"><span>2. Apa arti homo qua homo?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa2" hidden><p>Homo qua homo berarti manusia sebagai manusia, yaitu sudut pandang formal filsafat manusia yang melihat struktur fundamental manusia secara utuh.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa3"><span>3. Apa dua moto penting filsafat manusia?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa3" hidden><p>Man is the measure of all things dari Protagoras dan Know thyself atau Gnoti seauton dari Orakel Delphi.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa4"><span>4. Apa corak Yunani, Abad Pertengahan, dan Modern?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa4" hidden><p>Yunani bercorak kosmosentris, Abad Pertengahan teosentris, dan masa Modern antroposentris serta dipengaruhi perkembangan ilmu.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa5"><span>5. Apa tiga tingkat kehidupan?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa5" hidden><p>Vita vegetativa pada tumbuhan, vita sensitiva pada hewan, dan vita rationalis pada manusia.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa6"><span>6. Apa beda mekanisme dan vitalisme?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa6" hidden><p>Mekanisme menjelaskan hidup sebagai proses materi yang mekanistik. Vitalisme menegaskan adanya daya kehidupan atau elan vital.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa7"><span>7. Apa arti manusia sebagai rational animal?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa7" hidden><p>Manusia sebagai rational animal berarti manusia adalah hewan yang bernalar dan dapat bertindak berdasarkan alasan serta hukum logika.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa8"><span>8. Apa beda deduksi, induksi, dan abduksi?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa8" hidden><p>Deduksi menjamin kesimpulan jika premis benar, induksi menghasilkan kesimpulan yang mungkin benar, dan abduksi mencari penjelasan terbaik serta dapat melibatkan lompatan imajinasi.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa9"><span>9. Mengapa manusia disebut religious animal?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa9" hidden><p>Karena menurut materi PDF, pengenalan kepada Tuhan dan prinsip tertinggi berakar dalam kodrat manusia melalui physis dan telos.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa10"><span>10. Apa tiga bentuk religi primitif menurut Durkheim?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa10" hidden><p>Animisme, naturisme, dan totemisme.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa11"><span>11. Mengapa Cassirer menyebut manusia symbolizing animal?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa11" hidden><p>Karena manusia tidak hanya hidup dalam dunia fisik, tetapi dalam dunia simbol seperti bahasa, mitos, religi, seni, sejarah, dan ilmu.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa12"><span>12. Apa tambahan manusia menurut Uexkull?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa12" hidden><p>Selain sistem akseptor dan efektor seperti hewan, manusia memiliki sistem simbolis.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa13"><span>13. Apa beda tanda dan simbol?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa13" hidden><p>Tanda menyatakan sesuatu dan membawa informasi, sedangkan simbol bermakna dan membawa meaning.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa14"><span>14. Apa beda bahasa emosional dan proposisional?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa14" hidden><p>Bahasa emosional adalah curahan afeksi, sedangkan bahasa proposisional memiliki struktur sintaksis dan logis.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa15"><span>15. Jelaskan manusia sebagai kesatuan jiwa dan tubuh.</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa15" hidden><p>Manusia bukan hanya tubuh yang bergerak dan bukan jiwa yang melayang bebas, tetapi kesatuan jiwa dan tubuh yang utuh.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa16"><span>16. Apa pandangan Driyarkara tentang tubuh?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa16" hidden><p>Tubuh adalah unsur diri kita, bukan keseluruhan diri. Tubuh adalah cara AKU menampakkan diri ke dunia.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa17"><span>17. Apa beda immediate dan mediate animation?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa17" hidden><p>Immediate animation menyatakan jiwa muncul sejak pertemuan sel reproduktif. Mediate animation menyatakan jiwa baru muncul ketika materi tubuh sudah cukup matang.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa18"><span>18. Apa itu Mind-Body Problem?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa18" hidden><p>MBP adalah persoalan tentang bagaimana jiwa atau pikiran immaterial dapat berhubungan dan saling memengaruhi dengan tubuh material.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa19"><span>19. Sebutkan beberapa teori MBP.</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa19" hidden><p>Materialisme, idealisme, harmoni purba, okkasionalisme, epifenomenalisme, double-aspect theory, dan interaksionisme.</p></div></article>
+          <article class="qa-item accordion searchable"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="qa20"><span>20. Apa kesimpulan Penfield?</span><span class="toggle-icon" aria-hidden="true">+</span></button><div class="accordion-panel" id="qa20" hidden><p>Penfield menyimpulkan pikiran sadar bukan sekadar mekanisme saraf. Mind mengawasi, mengatur, dan memberi makna pada pengalaman.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad soft-band" id="kuis">
+      <div class="container">
+        <div class="quiz-shell searchable" data-keywords="kuis pilihan ganda skor pembahasan M1 M10 filsafat manusia">
+          <div class="section-heading compact">
+            <p class="eyebrow">Kuis</p>
+            <h2>Latihan pilihan ganda</h2>
+            <p>Minimal 15 soal dari M1 sampai M10, lengkap dengan skor dan pembahasan.</p>
+          </div>
+          <div class="quiz-actions">
+            <button class="primary-button" id="startQuiz" type="button">Mulai Kuis</button>
+            <button class="secondary-button" id="submitQuiz" type="button" hidden>Cek Jawaban</button>
+            <button class="ghost-button" id="resetQuiz" type="button" hidden>Reset Quiz</button>
+          </div>
+          <div id="quizContainer" class="quiz-container" aria-live="polite"></div>
+          <div id="quizResult" class="quiz-result" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas">Top</button>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Catatan UTS Filsafat Manusia M1-M10, dibuat untuk belajar cepat.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
