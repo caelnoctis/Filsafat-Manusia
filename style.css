@@ -215,6 +215,7 @@ p {
   margin-top: 18px;
   color: var(--muted);
   font-size: 1.12rem;
+  overflow-wrap: anywhere;
 }
 
 .hero-actions,
@@ -846,6 +847,21 @@ body[data-theme="dark"] .option-list label {
     padding: 14px;
   }
 
+  .hero-copy,
+  .hero-actions,
+  .search-panel,
+  .hero-board {
+    width: calc(100vw - 48px);
+    max-width: calc(100vw - 48px);
+  }
+
+  .hero-subtitle,
+  .hero-actions > *,
+  .search-panel {
+    width: calc(100% - 16px);
+    max-width: calc(100% - 16px);
+  }
+
   .overview-grid,
   .keyword-grid,
   .summary-grid,
@@ -888,6 +904,7 @@ body[data-theme="dark"] .option-list label {
   .secondary-button,
   .ghost-button {
     width: 100%;
+    max-width: calc(100vw - 48px);
   }
 
   .search-row input {
